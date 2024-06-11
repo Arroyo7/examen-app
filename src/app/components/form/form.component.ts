@@ -12,9 +12,16 @@ export class FormComponent {
 
   mForm = this.fb.group({
 
-      name: ["Madrid"]
+      name: [""]
   })
   constructor(private fb: FormBuilder){
 
   }
+  sendForm(){
+
+
+
+  }
 }
+
+

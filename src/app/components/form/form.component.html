@@ -1,7 +1,7 @@
-<div class="flex flex-col items-center justify-center h-screen">
+<div class="flex flex-col items-center justify-center p-9">
     <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md w-full max-w-md">
       <h2 class="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-200">Añadir ciudad</h2>
-      <form class="space-y-4">
+      <form [formGroup] = "mForm" class="space-y-4">
         <div>
           <label for="city" class="block text-gray-700 dark:text-gray-300 font-medium mb-2">
             Nombre de la ciudad
@@ -9,11 +9,13 @@
           <input
             id="city"
             placeholder="Escribe el nombre de la ciudad"
+            formControlName = "name"
             class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-400 dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600"
             type="text"
           />
         </div>
         <button
+          (click) = "sendForm()"
           type="submit"
           class="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md focus:outline-none focus:ring focus:ring-blue-400"
         >
